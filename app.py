@@ -1,6 +1,7 @@
 
 # -----------------  Password Generator ----------------- #
 # author: Sayed Mohammad Rezaie -- 10.Nov.2020
+# github: @cdied  ---  email: cdiedwbh@gmail.com
 
 # description:
 # 1. simple password generator
