@@ -1,7 +1,7 @@
 
 # -----------------  Password Generator ----------------- #
 # author: Sayed Mohammad Rezaie -- 10.Nov.2020
-# github: @cdied  ---  email: cdiedwbh@gmail.com
+# github: @cdied
 
 # description:
 # 1. simple password generator
@@ -9,29 +9,11 @@
 # 3. generating password with the given lenght
 # 4. imports tkinter, random and string
 
-
-# ------------------------  GUI  ------------------------ #
+# ----------------------  imports  ---------------------- #
 
 from tkinter import *
 import random
 import string
-
-root = Tk()
-root.title("Password Generator")
-
-canvas = Canvas(root, background="#1A3D56", width=500, height=270).pack()
-
-wlable = Label(root, text="Welcome to Password Generator", background="#1A3D56", foreground="WHITE")
-wlable.place(relx=0.5, rely=0.1, anchor=CENTER)
-
-elable = Label(root, text="Enter Password lenght 8-20", background="#1A3D56", foreground="WHITE")
-elable.place(relx=0.10, rely=0.25, width=150, height=30)
-
-spinbox = Spinbox(root, from_= 0, to = 20, background="#1A3D56", foreground="WHITE")
-spinbox.place(relx=0.5, rely=0.25, width=200, height=30)
-
-button = Button(root, text="Generate Password", command=lambda:generate(lenght))
-button.place(relx=0.5, rely=0.55, width=200, height=30, anchor=CENTER)
 
 
 # ---------------------  Functions  --------------------- #
@@ -63,6 +45,26 @@ def generate(lenght):
     else:
         pass
     Label(root, text=password, background="#1A3D56", foreground="WHITE", font=("Cambria", 16, "bold")).place(relx=0.5, rely=0.8, anchor=CENTER, width=310)
+
+
+# ------------------------  GUI  ------------------------ #
+
+root = Tk()
+root.title("Password Generator")
+
+canvas = Canvas(root, background="#1A3D56", width=500, height=270).pack()
+
+wlable = Label(root, text="Welcome to Password Generator", background="#1A3D56", foreground="WHITE")
+wlable.place(relx=0.5, rely=0.1, anchor=CENTER)
+
+elable = Label(root, text="Enter Password lenght 8-20", background="#1A3D56", foreground="WHITE")
+elable.place(relx=0.10, rely=0.25, width=150, height=30)
+
+spinbox = Spinbox(root, from_= 0, to = 20, background="#1A3D56", foreground="WHITE")
+spinbox.place(relx=0.5, rely=0.25, width=200, height=30)
+
+button = Button(root, text="Generate Password", command=lambda:generate(lenght))
+button.place(relx=0.5, rely=0.55, width=200, height=30, anchor=CENTER)
 
 
 root.mainloop()
